@@ -1,0 +1,10 @@
+UncaughtPromiseError > TypeError
+
+Uncaught Promise > Cannot read properties of undefined (reading 'records')
+
+Occured on edu-crm-hubspot.odoo.com on 2025-06-04 15:58:10 GMT
+
+TypeError: Cannot read properties of undefined (reading 'records')
+    at AutosaveMany2ManyTagsField.onRecordChange (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:19491:63)
+    at https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:6351:24
+    at https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:4704:432

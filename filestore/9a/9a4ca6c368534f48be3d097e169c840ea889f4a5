@@ -1,0 +1,28 @@
+UncaughtPromiseError > OwlError
+
+Uncaught Promise > An error occured in the owl lifecycle (see this Error's "cause" property)
+
+Occured on edu-crm-hubspot.odoo.com on 2025-06-04 15:58:25 GMT
+
+OwlError: An error occured in the owl lifecycle (see this Error's "cause" property)
+    Error: An error occured in the owl lifecycle (see this Error's "cause" property)
+        at handleError (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:972:101)
+        at App.handleError (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:1619:29)
+        at ComponentNode.initiateRender (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:1064:19)
+        at https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:1617:80
+        at Field.template (eval at compile (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:1574:421), <anonymous>:16:31)
+        at Fiber._render (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:996:96)
+        at Fiber.render (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:995:6)
+        at ComponentNode.initiateRender (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:1065:47)
+
+Caused by: TypeError: Cannot read properties of undefined (reading 'records')
+    at AutosaveMany2ManyTagsField.onRecordChange (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:19491:63)
+    at https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:6350:286
+    at effect (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:4597:111)
+    at fct (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:6350:215)
+    at AutosaveMany2ManyTagsField.<anonymous> (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:6351:243)
+    at https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:1063:80
+    at Array.map (<anonymous>)
+    at ComponentNode.initiateRender (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:1063:69)
+    at https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:1617:80
+    at Field.template (eval at compile (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:1574:421), <anonymous>:16:31)

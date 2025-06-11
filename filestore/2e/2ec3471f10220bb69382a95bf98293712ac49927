@@ -1,0 +1,30 @@
+UncaughtPromiseError > OwlError
+
+Uncaught Promise > The following error occurred in onWillStart: "Cannot read properties of undefined (reading 'records')"
+
+Occured on edu-crm-hubspot.odoo.com on 2025-06-04 16:38:23 GMT
+
+OwlError: The following error occurred in onWillStart: "Cannot read properties of undefined (reading 'records')"
+    Error
+        at wrapError (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:1102:139)
+        at onWillStart (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:1107:117)
+        at useRecordObserver (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:6351:227)
+        at AutosaveMany2ManyTagsField.setup (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:19489:880)
+        at new ComponentNode (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:1060:202)
+        at https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:1617:6
+        at Field.template (eval at compile (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:1574:421), <anonymous>:18:31)
+        at Fiber._render (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:996:96)
+        at Fiber.render (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:995:6)
+        at ComponentNode.initiateRender (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:1065:47)
+
+Caused by: TypeError: Cannot read properties of undefined (reading 'records')
+    at AutosaveMany2ManyTagsField.onRecordChange (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:19491:63)
+    at https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:6350:286
+    at effect (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:4597:111)
+    at fct (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:6350:215)
+    at AutosaveMany2ManyTagsField.<anonymous> (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:6351:243)
+    at AutosaveMany2ManyTagsField.<anonymous> (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:1102:506)
+    at https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:1063:80
+    at Array.map (<anonymous>)
+    at ComponentNode.initiateRender (https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:1063:69)
+    at https://edu-crm-hubspot.odoo.com/web/assets/6b63996/web.assets_web.min.js:1617:80

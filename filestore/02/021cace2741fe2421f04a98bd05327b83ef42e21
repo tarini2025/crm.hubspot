@@ -1,0 +1,65 @@
+RPC_ERROR
+
+Odoo Server Error
+
+Occured on edu-crm-hubspot.odoo.com on model account.analytic.plan and id 21 on 2025-06-02 18:33:25 GMT
+
+Traceback (most recent call last):
+  File "/home/odoo/src/odoo/18.0/odoo/http.py", line 1976, in _transactioning
+    return service_model.retrying(func, env=self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/18.0/odoo/service/model.py", line 156, in retrying
+    result = func()
+             ^^^^^^
+  File "/home/odoo/src/odoo/18.0/odoo/http.py", line 1943, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/18.0/odoo/http.py", line 2191, in dispatch
+    result = self.request.registry['ir.http']._dispatch(endpoint)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/18.0/odoo/addons/base/models/ir_http.py", line 333, in _dispatch
+    result = endpoint(**request.params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/18.0/odoo/http.py", line 740, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/18.0/addons/web/controllers/dataset.py", line 36, in call_kw
+    return call_kw(request.env[model], method, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/18.0/odoo/api.py", line 533, in call_kw
+    result = getattr(recs, name)(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/18.0/addons/analytic/models/analytic_plan.py", line 206, in get_relevant_plans
+    root_plans = (project_plan + other_plans).filtered(lambda p: (
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/18.0/odoo/models.py", line 6523, in filtered
+    return self.browse(rec.id for rec in self if func(rec))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/18.0/odoo/models.py", line 6222, in browse
+    ids = tuple(ids)
+          ^^^^^^^^^^
+  File "/home/odoo/src/odoo/18.0/odoo/models.py", line 6523, in <genexpr>
+    return self.browse(rec.id for rec in self if func(rec))
+                                                 ^^^^^^^^^
+  File "/home/odoo/src/odoo/18.0/addons/analytic/models/analytic_plan.py", line 209, in <lambda>
+    and p._get_applicability(**kwargs) != 'unavailable'
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/18.0/addons/analytic/models/analytic_plan.py", line 243, in _get_applicability
+    score_rule = applicability_rule._get_score(**kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/18.0/addons/account/models/account_analytic_plan.py", line 67, in _get_score
+    if account and account.code.startswith(account_prefixes):
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'bool' object has no attribute 'startswith'
+
+The above server error caused the following client error:
+OwlError: An error occured in the owl lifecycle (see this Error's "cause" property)
+    Error: An error occured in the owl lifecycle (see this Error's "cause" property)
+        at handleError (https://edu-crm-hubspot.odoo.com/web/assets/f4a188c/web.assets_web.min.js:972:101)
+        at App.handleError (https://edu-crm-hubspot.odoo.com/web/assets/f4a188c/web.assets_web.min.js:1619:29)
+        at ComponentNode.initiateRender (https://edu-crm-hubspot.odoo.com/web/assets/f4a188c/web.assets_web.min.js:1064:19)
+
+Caused by: RPC_ERROR: Odoo Server Error
+    RPC_ERROR
+        at makeErrorFromResponse (https://edu-crm-hubspot.odoo.com/web/assets/f4a188c/web.assets_web.min.js:3148:163)
+        at XMLHttpRequest.<anonymous> (https://edu-crm-hubspot.odoo.com/web/assets/f4a188c/web.assets_web.min.js:3153:13)
